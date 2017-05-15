@@ -1,4 +1,5 @@
 <?php
+include 'gerador_senha.php';
 //obtém os valores 
 $username = $_POST["username"];
 $senha = $_POST["senha"];
