@@ -2,7 +2,7 @@
 include 'gerador_senha.php';
 //obtém os valores 
 $username = $_POST["username"];
-$senha = $_POST["senha"];
+$senha = password_gen();
 
 //acesso ao banco
 include "conecta_pg.inc"
