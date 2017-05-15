@@ -1,0 +1,68 @@
+<body>
+<base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/wanaka-tree.jpg">
+<div id="carousel">
+  <figure id="spinner">
+    <img src="https://trello-attachments.s3.amazonaws.com/59145a5ca1eb5f4e9e41a923/5919b33544107e4ddacb831f/488b11992fc2861c53a852f165e48457/Divergete.jpg" alt>
+    <img src="https://trello-attachments.s3.amazonaws.com/59145a5ca1eb5f4e9e41a923/5919b33544107e4ddacb831f/ad45b3cae9816e3decdf7937bf8be778/adrenalina_2_alta_voltagem.jpg" alt>
+    <img src="https://trello-attachments.s3.amazonaws.com/59145a5ca1eb5f4e9e41a923/5919b33544107e4ddacb831f/cf05af872fd86bd1180fea1bc71c32e0/Osso_duro___o_mercado_negor_est%C3%A1_prestes_a__ficar_sagrento.jpg" alt>
+    <img src="https://trello-attachments.s3.amazonaws.com/59145a5ca1eb5f4e9e41a923/5919b33544107e4ddacb831f/69e09798d8be14cbb8dc52d27e4628a4/Jovens_tit%C3%A3s.jpg" alt>
+    <img src="https://trello-attachments.s3.amazonaws.com/59145a5ca1eb5f4e9e41a923/5919b33544107e4ddacb831f/6d372437f6dd17ffabe3270d8ea84532/X_Men_Apocalipse.jpg" alt>
+    <img src="https://trello-attachments.s3.amazonaws.com/59145a5ca1eb5f4e9e41a923/5919b33544107e4ddacb831f/71e24da73aadf7ac0524c2b7ae0fc5fe/cargo.jpg" alt>
+    <img src="https://trello-attachments.s3.amazonaws.com/59145a5ca1eb5f4e9e41a923/5919b33544107e4ddacb831f/1113146b7595a987d0a0e67b58af7b98/prometheus.jpg" alt>
+    <img src="https://trello-attachments.s3.amazonaws.com/59145a5ca1eb5f4e9e41a923/5919b33544107e4ddacb831f/e52660c2dd4573f26d37e2690b052774/Gente_grande_2.jpg" alt>
+  </figure>
+</div>
+<span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+<span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+<style>
+    div#carousel { 
+  perspective: 1200px; 
+  background: #00000; 
+  padding-top: 10%; 
+  font-size:0; 
+  margin-bottom: 3rem; 
+  overflow: hidden; 
+}
+figure#spinner { 
+  transform-style: preserve-3d; 
+  height: 300px; 
+  transform-origin: 50% 50% -500px; 
+  transition: 1s; 
+} 
+figure#spinner img { 
+  width: 40%; max-width: 425px; 
+  position: absolute; left: 30%;
+  transform-origin: 50% 50% -500px;
+  outline:1px solid transparent; 
+}
+figure#spinner img:nth-child(1) { transform:rotateY(0deg); 
+}
+figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+div#carousel ~ span { 
+  color: #000; 
+  margin: 7%; 
+  display: inline-block; 
+  text-decoration: none; 
+  font-size: 2rem; 
+  transition: 0.6s color; 
+  position: relative; 
+  margin-top: -6rem; 
+  border-bottom: none; 
+  line-height: 0; }
+div#carousel ~ span:hover { color: #888; cursor: pointer; }
+</style>
+<script type="text/javascript">
+ var angle = 0;
+function galleryspin(sign) { 
+spinner = document.querySelector("#spinner");
+if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+}
+</script>
+</body>
